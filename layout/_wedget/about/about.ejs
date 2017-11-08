@@ -1,0 +1,28 @@
+<div class="main">
+    <div class="about bl-container">
+        <%
+            var about = site.data.about
+            var info = about.information
+            var contract = about.contract
+            var skills = about.skills
+            var projects = about.projects
+
+            // console.log(contract)
+        %>
+
+        <!-- info 信息展示 -->
+        <%- partial("info", {info: info})%>
+
+        <!-- contract 信息展示 -->
+        <%- partial("contract", {contract: contract})%>
+
+        <!-- skills 信息展示 -->
+        <%- partial("skills", {skills: skills})%>
+
+        <!-- projects 信息展示 -->
+        <%- partial("projects", {projects: projects})%>
+
+        <!-- 结束信息展示 -->
+        <%- partial("end")%>
+    </div>
+</div>

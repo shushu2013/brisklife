@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- partial('_partial/head') %>
+    <body>
+        <%- body %>
+        <% 
+            var cdn = theme.cdn
+            var jq = cdn.jquery ? cdn.jquery : 'js/jquery.min.js'
+            var bootstrap = cdn.bootstrap ? cdn.bootstrap : 'js/bootstrap.min.js'
+        %>
+        <%- js(jq)%>
+        <%- js(bootstrap)%>
+        <%- js('js/index.js')%>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<% var hobby = site.data.hobby %>
+<div class="main hobby">
+
+  <div class="nav">
+    <ul>
+      <% hobby.forEach( function(item) { %>
+        <li style="width: <%= (90 / hobby.length) + '%' %>">
+          <span class="<% if(item === hobby[0]) { %>actived<% } else { %> <% } %>" data-category="<%= item.id%>"><%= __("hobby." + item.id) %></span>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <div class="list">
+    <% hobby.forEach( function(item) { %>
+      <% item.data.forEach ( function(data) { %>
+        <div class="md-trigger <% if (item === hobby[0]) { %>no-hidden<% } else { %>hidden<% } %> " data-category="<%=item.id %>" data-modal="">
+          <div class="item">
+            <div>
+              <% if (data.url) { %><a href="<%=data.url %>" target="_blank"><% } %> 
+                <%= data.name %>
+              <% if (data.url) { %></a><% } %>
+            </div>
+            <% if (data.imgUrl) { %>
+              <img src="<%= data.imgUrl %>" />
+            <% } %>
+          </div>
+        </div>
+      <% }) %>
+    <% }) %>
+  </div>
+
+</div>
+

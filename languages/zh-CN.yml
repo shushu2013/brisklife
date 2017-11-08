@@ -1,0 +1,37 @@
+categories: 分类
+search: 搜索
+tags: 标签
+tagcloud: 标签云
+tweets: 推文
+prev: 上一页
+next: 下一页
+comment: 留言
+archive_a: 归档
+archive_b: 归档：%s
+page: 第 %d 页
+recent_posts: 最新文章
+newer: Newer
+older: Older
+share: Share
+powered_by: Powered by
+rss_feed: RSS Feed
+category: Category
+tag: Tag
+
+menu:
+  home: 首页
+  hobby: 兴趣
+  about: 关于
+
+about:
+  weibo: 微博
+  github: Github
+  bilibili: 哔哩哔哩
+  contract: 联系方式
+  skills: 技能
+  projects: 项目
+
+hobby:
+  art: 艺术
+  history: 历史
+  reading: 阅读

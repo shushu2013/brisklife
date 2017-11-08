@@ -1,0 +1,16 @@
+<div class="main">
+    <!-- 所有文章列表 -->
+    <% if (site.posts.length <= 0) { %>
+        <p>博主加油！保持每月两篇高质量博文！！！</p>
+    <% }  else { %>
+        <p class="text-success">博主加油！已累计发布 <%= site.posts.length %> 篇文章 </p>
+        <ul class="posts">
+            <% site.posts.sort("date", "desc").each( function(post) { %>
+                <li class="item">
+                    <h4><a href="<%= url_for(post.path) %>"><%= post.title %></a></h4>
+                </li>
+            <% }) %>
+        </ul>
+
+    <% } %>
+</div>

@@ -1,0 +1,53 @@
+
+<% if(contract) { %>
+    <div class="show center-align">
+
+        <div class="xline">
+            <span></span>
+        </div>
+
+        <div class="title left-border">
+            <span><%= (__('about.contract')).toUpperCase() %><span>
+        </div>
+
+        <% var count = 0 %>
+        <% for (var key in contract) { %>
+            <% var top = (95 + count * 50) + 'px' %>
+
+            <% if (count % 2 === 0) { %>
+
+                <div class="dot">
+                    <span></span>
+                </div>
+
+                <div class="left" style="top: <%= top %>">
+                    <a href="<%= contract[key] %>" target="_blank">
+                        <%= __('about.' + key) %>
+                        <img src="<%= '/icon/' + key + '.svg'%>" width="30px" />
+                    </a>
+                </div>
+            <% } else { %>
+            
+                <div class="line">
+                    <span></span>
+                </div>
+
+                <div class="right" style="top: <%= top %>">
+                    <a href="<%= contract[key] %>" target="_blank">
+                        <img src="<%= '/icon/' + key + '.svg'%>" width="30px" />
+                        <%= __('about.' + key) %>
+                    </a>
+                </div>
+            <% } %>
+
+            <% count ++ %>
+        <% } %>
+        
+        <% if (count % 2 === 0) { %>
+            <div class="dot">
+                <span></span>
+            </div>
+        <% } %>
+        
+    </div>
+<% } %>

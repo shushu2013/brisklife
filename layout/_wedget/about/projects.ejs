@@ -1,0 +1,52 @@
+
+<% if(projects) { %>
+    <div class="show center-align">
+
+        <div class="line">
+            <span></span>
+        </div>
+
+        <div class="title left-border">
+            <span><%= (__('about.projects')).toUpperCase() %><span>
+        </div>
+
+        <div class="line">
+            <span></span>
+        </div>
+        
+        <% var count = 0 %>
+        <% projects.forEach( function(item) { %>
+            <% var top = (155 + count * 120) + 'px' %>
+
+            <% if (count % 2 === 0) { %>
+                <div class="dot">
+                    <span></span>
+                </div>
+            <% } else { %>
+                <div class="xline">
+                    <span></span>
+                </div>
+            <% } %>
+
+
+            <div class="right" style="top: <%= top %>">
+                <a href="<%= item.url %>" <% if (item.url) { %> target="_blank" <% } %>><%= item.name %></a> 
+            </div>
+
+            <div class="left" style="top: <%= top %>; margin-top: -30px;">
+                <% if (item.imgUrl) { %>
+                    <img class="picture" src="<%= item.imgUrl %>" />
+                <% } %>
+            </div>
+
+            <% count ++ %>
+        <% }) %>
+        
+        <% if (count % 2 === 0) { %>
+            <div class="dot">
+                <span></span>
+            </div>
+        <% } %>
+        
+    </div>
+<% } %>

@@ -1,0 +1,20 @@
+<div class="side hiddened">
+    <div class="table">
+        <ul>
+            <% if (theme.menu.length > 0 ) { %>
+                <% theme.menu.forEach(function(item){ %>
+                    <% 
+                        var menuName = 'menu.' + item.id
+                        var link = item.link
+                    %> 
+                    <li>
+                        <a href="<%= link %>"><%= __(menuName) %></a>
+                    </li>
+                <% }) %>
+            <% } %>
+        </ul>
+    </div>
+</div>
+
+<div class="side-action">
+</div>

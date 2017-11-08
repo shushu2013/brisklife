@@ -1,0 +1,10 @@
+<% if (info) { %>
+    <div class="center-align">
+        <div class="avatar" style="background-image:url('<%= info.avatar%>')">
+            <span class="mask">
+                <%= info.name || config.author %>
+            </span>
+        </div>
+        <p><%= info.des %><p>
+    </div>
+<% } %>
