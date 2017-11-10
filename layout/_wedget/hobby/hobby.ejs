@@ -16,9 +16,9 @@
       <% item.data.forEach ( function(data) { %>
         <div class="md-trigger <% if (item === hobby[0]) { %>no-hidden<% } else { %>hidden<% } %> " data-category="<%=item.id %>" data-modal="">
           <div class="item">
-            <div>
+            <div title="<%= data.name %>">
               <% if (data.url) { %><a href="<%=data.url %>" target="_blank"><% } %> 
-                <%= data.name %>
+                <%- truncate(data.name, {length: 12}) %>
               <% if (data.url) { %></a><% } %>
             </div>
             <% if (data.imgUrl) { %>

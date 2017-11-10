@@ -1,6 +1,29 @@
 {
-    "name": "生命练习生",
-    "avatar": "",
-    "skill": "",
-    "information": "前端工程师一枚"
+    "information": {
+        "name": "生命练习生",
+        "avatar": "http://oet93w0rc.bkt.clouddn.com/image/github/avatar.jpg",
+        "des": "于练习中凝练，唯慢不破"
+    },
+    "contract": {
+        "bilibili":"https://space.bilibili.com/10411908",
+        "weibo": "https://weibo.com/2495087303",
+        "github": "https://github.com/shushu2013"
+    },
+    "skills": {
+        "javascript": 7,
+        "html5": 8,
+        "css3": 7,
+        "java": 6
+    },
+    "projects": [
+        {
+            "name": "多人博客系统",
+            "url": "https://github.com/shushu2013/MYblog",
+            "imgUrl": "http://oet93w0rc.bkt.clouddn.com/image/github/myblog.png"
+        },{
+            "name": "Hexo 主题 brisklife",
+            "url": "https://github.com/shushu2013/brisklife",
+            "imgUrl": "http://oet93w0rc.bkt.clouddn.com/image/github/brisklife.png"
+        }
+    ]
 }

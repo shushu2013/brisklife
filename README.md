@@ -2,6 +2,8 @@
 
 brisklife 是一款简洁的响应式 Hexo 主题，使用时确保你的 Hexo 升级到版本3以上
 
+![brisklife](http://oet93w0rc.bkt.clouddn.com/image/github/brisklife.png)
+
 #### 预览
 
 [Hexo 博客](http://shushu2013.github.io/)
@@ -45,16 +47,16 @@ $ git clone git@github.com:shushu2013/brisklife.git // 下载 brisklife
 
 ``` json
     {
-        "id": "history",
+        "id": "art",
         "data": [
             {
-                "name": "易中天中华史",
-                "url": "https://book.douban.com/subject/26924391/",
-                "imgUrl": "https://images-cn.ssl-images-amazon.com/images/I/51nvzA%2Bf-XL.jpg"
+                "name": "廖墨军素描入门",
+                "url": "https://www.bilibili.com/video/av4144372",
+                "imgUrl": ""
             },
             {
-                "name": "中国历史图谱",
-                "url": "",
+                "name": "贵哥素描人门",
+                "url": "https://www.bilibili.com/video/av7492861",
                 "imgUrl": ""
             }
         ]
@@ -65,7 +67,7 @@ $ git clone git@github.com:shushu2013/brisklife.git // 下载 brisklife
 ``` yml
 # brisklife/languages/zh-CN.yml
 hobby:
-  art: 艺术
-  history: 历史   # 对应 _data/hobby.json 中的 history
+  art: 艺术       # 对应 _data/hobby.json 中的 art
+  history: 历史
   reading: 阅读
 ```
