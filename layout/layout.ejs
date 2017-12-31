@@ -3,13 +3,13 @@
     <%- partial('_partial/head') %>
     <body>
         <%- body %>
+
+        <!-- 加载 js -->
         <% 
-            var cdn = theme.cdn
-            var jq = cdn.jquery ? cdn.jquery : 'js/jquery.min.js'
-            var bootstrap = cdn.bootstrap ? cdn.bootstrap : 'js/bootstrap.min.js'
+            var scripts = theme.js
+            scripts.forEach(function(item) { 
         %>
-        <%- js(jq)%>
-        <%- js(bootstrap)%>
-        <%- js('js/index.js')%>
+            <script src="<%=item.src %>"></script>
+        <% }) %>
     </body>
 </html>

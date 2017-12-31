@@ -1,13 +1,13 @@
 
 <% if(skills) { %>
-    <div class="show center-align">
+    <div class="c-show u-center-align">
 
-        <div class="xline">
+        <div class="c-show__line--large">
             <span></span>
         </div>
 
-        <div class="title right-border">
-            <span><%= (__('about.skills')).toUpperCase() %><span>
+        <div class="c-show__title c-show__title--right">
+            <span><%= (__('about.skills')).toUpperCase() %></span>
         </div>
 
         <% var count = 0 %>
@@ -15,28 +15,28 @@
             <% var top = (95 + count * 50) + 'px' %>
 
             <% if (count % 2 === 0) { %>
-                <div class="dot">
+                <div class="c-show__dot">
                     <span></span>
                 </div>
             <% } else { %>
-                <div class="line">
+                <div class="c-show__line">
                     <span></span>
                 </div>
             <% } %>
 
 
-            <div class="left" style="top: <%= top %>">
+            <div class="c-show__info c-show__info--left" style="top: <%= top %>">
                 <%= key %> : 
                 <img src="<%= '/icon/' + key + '.svg'%>" width="30px" />
             </div>
 
-            <div class="right" style="top: <%= top %>">
+            <div class="c-show__info c-show__info--right" style="top: <%= top %>">
                 <% var degree = skills[key] % 11  %> 
                 <% for (var i = 0; i < degree; i ++)  { %>
-                    <span class="star"></span>
+                    <span class="c-show__star"></span>
                 <% } %> 
                 <% for (var i = 0; i < 10 - degree; i ++)  { %>
-                    <span class="star no-star"></span>
+                    <span class="c-show__star--none"></span>
                 <% } %>
             </div>
 
@@ -44,7 +44,7 @@
         <% } %>
         
         <% if (count % 2 === 0) { %>
-            <div class="dot">
+            <div class="c-show__dot">
                 <span></span>
             </div>
         <% } %>

@@ -1,21 +1,21 @@
 <% var hobby = site.data.hobby %>
-<div class="main hobby">
+<div class="c-hobby l-container">
 
-  <div class="nav">
+  <div class="c-hobby__nav">
     <ul>
       <% hobby.forEach( function(item) { %>
         <li style="width: <%= (90 / hobby.length) + '%' %>">
-          <span class="<% if(item === hobby[0]) { %>actived<% } else { %> <% } %>" data-category="<%= item.id%>"><%= __("hobby." + item.id) %></span>
+          <span class="<% if(item === hobby[0]) { %>is-hobby-active<% } else { %> <% } %> js-hobby-change" data-category="<%= item.id%>"><%= __("hobby." + item.id) %></span>
         </li>
       <% }) %>
     </ul>
   </div>
 
-  <div class="list">
+  <div class="c-hobby__list">
     <% hobby.forEach( function(item) { %>
       <% item.data.forEach ( function(data) { %>
-        <div class="md-trigger <% if (item === hobby[0]) { %>no-hidden<% } else { %>hidden<% } %> " data-category="<%=item.id %>" data-modal="">
-          <div class="item">
+        <div class="js-hobby-trigger <% if (item !== hobby[0]) {%>is-hidden<% } %>" data-category="<%=item.id %>" data-modal="">
+          <div class="c-hobby__item">
             <div title="<%= data.name %>">
               <% if (data.url) { %><a href="<%=data.url %>" target="_blank"><% } %> 
                 <%- truncate(data.name, {length: 12}) %>
