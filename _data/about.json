@@ -1,7 +1,7 @@
 {
     "information": {
         "name": "生命练习生",
-        "avatar": "http://oet93w0rc.bkt.clouddn.com/image/github/avatar.jpg",
+        "avatar": "http://oet93w0rc.bkt.clouddn.com/image/github/avatar.jpg?imageMogr2/interlace/1",
         "des": "于练习中凝练，唯慢不破"
     },
     "contract": {
@@ -19,11 +19,11 @@
         {
             "name": "多人博客系统",
             "url": "https://github.com/shushu2013/MYblog",
-            "imgUrl": "http://oet93w0rc.bkt.clouddn.com/image/github/myblog.png"
+            "imgUrl": "http://oet93w0rc.bkt.clouddn.com/image/github/myblog.png?imageMogr2/interlace/1"
         },{
             "name": "Hexo 主题 brisklife",
             "url": "https://github.com/shushu2013/brisklife",
-            "imgUrl": "http://oet93w0rc.bkt.clouddn.com/image/github/brisklife.png"
+            "imgUrl": "http://oet93w0rc.bkt.clouddn.com/image/github/brisklife.png?imageMogr2/interlace/1"
         }
     ]
 }

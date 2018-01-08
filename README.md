@@ -40,7 +40,7 @@ $ git clone git@github.com:shushu2013/brisklife.git // 下载 brisklife
 ```
 >1.1 其中 `bilibili`、`weibo`、`javascript` 对应的svg图标文件在
 `brisklife/source/icon` 文件夹下。  
->1.2 图标对应规则为：name.svg，比如 `weibo` 对应的图标为 `weibo.svg`。  
+>1.2 图标对应规则为：[name].svg，比如 `weibo` 对应的图标为 `weibo.svg`。  
 >1.3 如果没有，需要自己到 [iconfont](http://www.iconfont.cn)下载，并将相应图标放到 `brisklife/source/icon` 文件夹下。
 
 2、hobby (兴趣) 页面配置在 _data/hobby.json 中

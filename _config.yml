@@ -10,7 +10,29 @@ menu:
   - id: about
     link: /about
 
-# 配置 CDN 加速脚本加载
-cdn:
-  jquery: https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js
-  bootstrap: 'https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js'
+# 主题样式配置，提供了: geek（极客）、green（活力）、purple（紫晶） 主题
+
+# css 加载，可使用 CDN 或路径，按顺序加载 (normalize、bootstrap、main 必备)
+css: 
+  - name: normalize
+    src: '/css/normalize.min.css'
+  - name: /bootstrap
+    src: '/css/bootstrap.min.css'
+  - name: index
+    src: '/css/index.min.css'
+
+# 脚本加载，可使用 CDN 或路径，按顺序加载 (jqurey、fastclick、index 必备)
+js:
+  - name: jquery
+    src: 'https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js'
+  - name: fastclick
+    src: '/js/fastclick.min.js'
+  - name: index
+    src: '/js/index.js'
+
+# 兼容 IE 9 以下，需要用到的 js polyfill 脚本，可使用 CDN 链接或路径，按顺序加载（html5shiv、respond 必备）
+ployfill: 
+  - name: html5shiv               # IE 9 以下支持 H5 标签
+    src: '/js/html5shiv.min.js'
+  - name: respond                 # IE 9 以下支持媒体查询
+    src: '/js/respond.min.js'

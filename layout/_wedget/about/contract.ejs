@@ -1,13 +1,13 @@
 
 <% if(contract) { %>
-    <div class="show center-align">
+    <div class="c-show u-center-align">
 
-        <div class="xline">
+        <div class="c-show__line--large">
             <span></span>
         </div>
 
-        <div class="title left-border">
-            <span><%= (__('about.contract')).toUpperCase() %><span>
+        <div class="c-show__title c-show__title--left">
+            <span><%= (__('about.contract')).toUpperCase() %></span>
         </div>
 
         <% var count = 0 %>
@@ -16,11 +16,11 @@
 
             <% if (count % 2 === 0) { %>
 
-                <div class="dot">
+                <div class="c-show__dot">
                     <span></span>
                 </div>
 
-                <div class="left" style="top: <%= top %>">
+                <div class="c-show__info c-show__info--left" style="top: <%= top %>">
                     <a href="<%= contract[key] %>" target="_blank">
                         <%= __('about.' + key) %>
                         <img src="<%= '/icon/' + key + '.svg'%>" width="30px" />
@@ -28,11 +28,11 @@
                 </div>
             <% } else { %>
             
-                <div class="line">
+                <div class="c-show__line">
                     <span></span>
                 </div>
 
-                <div class="right" style="top: <%= top %>">
+                <div class="c-show__info c-show__info--right" style="top: <%= top %>">
                     <a href="<%= contract[key] %>" target="_blank">
                         <img src="<%= '/icon/' + key + '.svg'%>" width="30px" />
                         <%= __('about.' + key) %>
@@ -44,7 +44,7 @@
         <% } %>
         
         <% if (count % 2 === 0) { %>
-            <div class="dot">
+            <div class="c-show__dot">
                 <span></span>
             </div>
         <% } %>

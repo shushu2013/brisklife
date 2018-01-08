@@ -1,5 +1,5 @@
-<div class="side hiddened">
-    <div class="table">
+<div class="c-side is-hidden">
+    <div class="c-side__table">
         <ul>
             <% if (theme.menu.length > 0 ) { %>
                 <% theme.menu.forEach(function(item){ %>
@@ -8,7 +8,7 @@
                         var link = item.link
                     %> 
                     <li>
-                        <a href="<%= link %>"><%= __(menuName) %></a>
+                        <a class="js-touch" href="<%= link %>"><%= __(menuName) %></a>
                     </li>
                 <% }) %>
             <% } %>
@@ -16,5 +16,5 @@
     </div>
 </div>
 
-<div class="side-action">
+<div class="c-action js-action">
 </div>
