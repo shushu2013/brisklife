@@ -21,14 +21,14 @@ css:
   - name: index
     src: '/css/index.min.css'
 
-# 脚本加载，可使用 CDN 或路径，按顺序加载 (jqurey 必备)
+# 脚本加载，可使用 CDN 或路径，按顺序加载 (jqurey、fastclick、index 必备)
 js:
   - name: jquery
     src: 'https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js'
-  - name: bootstrap
-    src: 'https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js'
+  - name: fastclick
+    src: '/js/fastclick.min.js'
   - name: index
-    src: '/js/index.min.js'
+    src: '/js/index.js'
 
 # 兼容 IE 9 以下，需要用到的 js polyfill 脚本，可使用 CDN 链接或路径，按顺序加载（html5shiv、respond 必备）
 ployfill: 
