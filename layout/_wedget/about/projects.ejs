@@ -18,35 +18,24 @@
         <% projects.forEach( function(item) { %>
             <% var top = (155 + count * 120) + 'px' %>
 
-            <% if (count % 2 === 0) { %>
-                <div class="c-show__dot">
-                    <span></span>
-                </div>
-            <% } else { %>
-                <div class="c-show__line--large">
-                    <span></span>
-                </div>
-            <% } %>
+            <div class="c-show__dot">
+                <span></span>
+            </div>
 
-
-            <div class="c-show__info c-show__info--right" style="top: <%= top %>">
+            <div class="c-show__info c-show__info--<%= count % 2 === 0 ? 'right' : 'left' %>" style="top: <%= top %>">
                 <a href="<%= item.url %>" <% if (item.url) { %> target="_blank" <% } %>><%= item.name %></a> 
             </div>
 
-            <div class="c-show__info c-show__info--left" style="top: <%= top %>; margin-top: -30px;">
+            <div class="c-show__info c-show__info--<%= count % 2 === 0 ? 'left' : 'right' %>" style="top: <%= top %>; margin-top: -30px;">
                 <% if (item.imgUrl) { %>
                     <img class="c-show__pic" src="<%= item.imgUrl %>" />
                 <% } %>
             </div>
 
-            <% count ++ %>
-        <% }) %>
-        
-        <% if (count % 2 === 0) { %>
-            <div class="c-show__dot">
+            <div class="c-show__line--large">
                 <span></span>
             </div>
-        <% } %>
-        
+            <% count++ %>
+        <% }) %>
     </div>
 <% } %>

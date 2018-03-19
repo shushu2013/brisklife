@@ -18,7 +18,7 @@
           <div class="c-hobby__item">
             <div title="<%= data.name %>">
               <% if (data.url) { %><a href="<%=data.url %>" target="_blank"><% } %> 
-                <%- truncate(data.name, {length: 12}) %>
+                <%- truncate(data.name, {length: 22}) %>
               <% if (data.url) { %></a><% } %>
             </div>
             <% if (data.imgUrl) { %>
